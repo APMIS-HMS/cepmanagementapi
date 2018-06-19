@@ -1,0 +1,34 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "secret": "bc4c2e5fc0944fc9496653a3db1d57f2066a4377146a7bbd321cf82b5b9f012fd941ee49b81ff709e9c50cf8561e214b724ae3636a2cc9ddd806a59e3633cf63e21f1fa45b76b18b128c208d8b15e483e4ee47cf424041d12903109bbb6b300cd2d25f3c4e2e746fac15d1324b7ee4a05c6d518e9ec8eb43f149c14e670e0e4f26196a37f769cd37780a1cb35ab3bd0856d73cadfdcc14cfa7209b13354ca1ea3b71499786fbacb63ab11d3703d23df59d5a7211be5dade91a8182c5eb08dcd3db502e75fa92bf989944ef84c225b9d2172e33009177dd61ea36753c3bb3639751f56e9ac3b539ddbb815c518e38d998cb4bf6a1d6f190b296cee42cbf88945d",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  },
+  "mongodb": "mongodb://localhost:27017/apmis_admin"
+}
