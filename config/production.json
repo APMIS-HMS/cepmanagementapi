@@ -1,5 +1,5 @@
 {
-    "host": "localhost",
+    "host": "https://manage-apmis-api.azurewebsites.net/",
     "port": 3030,
     "public": "../public/",
     "paginate": {
