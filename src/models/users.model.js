@@ -6,7 +6,7 @@ module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
   const { Schema } = mongooseClient;
   const users = new mongooseClient.Schema({
-    apmisId: {type: String, unique: true},
+    email: {type: String, unique: true},
     password: { type: String, required: true },
     loginCount: {type: Number, default : 0 },
     roleIds : [{type: Schema.Types.ObjectId}]
