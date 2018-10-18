@@ -30,5 +30,5 @@
             "passwordField": "password"
         }
     },
-    "mongodb": "mongodb://localhost:27017/apmis_admin"
+    "mongodb": "mongodb://localhost:27017/cepbackendapi"
 }
